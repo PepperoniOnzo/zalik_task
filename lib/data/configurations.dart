@@ -1,6 +1,8 @@
 class Configs {
   static const String tagInstitute = 'INSTITUTE', tagGroup = 'GROUP';
 
+  static const String parseClassName = 'view-content';
+
   static const String link =
       "https://student.lpnu.ua/students_schedule?departmentparent_abbrname_selective=INSTITUTE&studygroup_abbrname_selective=GROUP&semestrduration=1";
 
