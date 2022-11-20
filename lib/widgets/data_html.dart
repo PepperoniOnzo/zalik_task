@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:provider/provider.dart';
 
 import '../data/configurations.dart';
@@ -16,16 +15,13 @@ class DataHtml extends StatelessWidget {
                 ? const Text('Something went wrong')
                 : Expanded(
                     child: SingleChildScrollView(
-                      physics: const BouncingScrollPhysics(),
-                      child: Html(
-                        data: context
+                        physics: const BouncingScrollPhysics(),
+                        child: Text(context
                             .watch<HomeModel>()
                             .document
                             .getElementsByClassName(Configs.parseClassName)
                             .first
-                            .innerHtml,
-                      ),
-                    ),
+                            .innerHtml)),
                   )
             : const CircularProgressIndicator()
         : const Text(
